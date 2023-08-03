@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome' ,compact('users'));
 });
 Route::get('/post',function(){
-    $posts=Post::find(2)->comment;
-    return view('oneToMany',compact($posts));
+    $posts=Post::all();
+    return view('oneToMany',compact('posts'));
 
 });
