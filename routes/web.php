@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $users=User::all();
     return view('welcome' ,compact('users'));
+});
+Route::get('/post',function(){
+    $posts=Post::all();
+    return view('oneToMany',compact('posts'));
+
 });
