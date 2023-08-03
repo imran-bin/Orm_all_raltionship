@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center my-3">ORM Relationship</h2>
+                <h2 class="text-center my-3">Eloquent Relationship</h2>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -20,8 +20,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td></td>
-                        <td></td>
+                        @foreach ($users as $user)
+                        <tr>
+                            <td> {{$user->name}}</td>
+                            <td>{{$user->phone->name}}</td>
+                        </tr>
+                           
+                        @endforeach
+                        
                     </tbody>
                 </table>
             </div>
