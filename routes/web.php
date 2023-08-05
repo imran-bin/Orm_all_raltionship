@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $users=User::all();
-    return view('welcome' ,compact('users'));
+    return view('oneToOne' ,compact('users'));
 });
 Route::get('/post',function(){
     $posts=Post::all();
